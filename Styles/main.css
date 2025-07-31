@@ -1,0 +1,108 @@
+﻿/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #22252c;
+    color: #c0b3a0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3f3250;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .navbar a {
+        color: #c0b3a0 !important;
+    }
+
+        .navbar a:hover {
+            background-color: #e14658;
+            color: #fff !important;
+        }
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #e14658;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+/* Inputs */
+.form-control::placeholder {
+    color: #888;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #e14658;
+    border-color: #e14658;
+}
+
+    .btn-primary:hover {
+        background-color: #3f3250;
+        border-color: #3f3250;
+    }
+
+/* Timer text */
+#timer {
+    font-weight: bold;
+}
+
+/* Feedback */
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+.success-message {
+    color: limegreen;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    background-color: #3f3250;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
+
+    footer:hover {
+        background-color: #e14658;
+        color: #fff;
+    }
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
