@@ -70,7 +70,7 @@
     <Content Include="About.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="ExploreEvents.aspx" />
-    <Content Include="ForgetPassword.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Signup.aspx" />
@@ -101,12 +101,12 @@
     <Compile Include="ExploreEvents.aspx.designer.cs">
       <DependentUpon>ExploreEvents.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword.aspx.cs">
-      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.aspx.designer.cs">
-      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

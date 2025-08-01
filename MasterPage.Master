@@ -47,15 +47,11 @@
                 </ul>
             </div>
         </nav>
-<<<<<<< HEAD
-
-=======
         <div class="bg-gradient-primary text-white py-2 overflow-hidden position-relative">
     <div class="scrolling-text px-3">
         Empowering Communities   |   Seamless Event Management   |   Volunteer Coordination   |   Certificate Generation   |   Real-Time Attendance Tracking   |   Role-Based Dashboards   |   User-Friendly Interface   |   Secure & Scalable Platform   |   EventSphere - Connecting People Through Events
     </div>
 </div>
->>>>>>> 07b0cce (Initial commit with offlineBootstrap and updated UI)
         <!-- Page Content -->
         <main class="container my-4">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
