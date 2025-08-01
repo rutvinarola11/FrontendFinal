@@ -23,7 +23,12 @@ body {
         .navbar a:hover {
             background-color: #e14658;
             color: #fff !important;
+<<<<<<< HEAD
         }
+=======
+            border-radius: 0.5rem; /* 8px rounded corners */
+            }
+>>>>>>> 07b0cce (Initial commit with offlineBootstrap and updated UI)
 
 .logo {
     height: 50px;
@@ -59,12 +64,45 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #e14658;
     border-color: #e14658;
 }
+<<<<<<< HEAD
 
     .btn-primary:hover {
         background-color: #3f3250;
         border-color: #3f3250;
     }
 
+=======
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #ffffff, #ffe4ea);
+    color: #e14658 !important;
+}
+.btn-primary:hover {
+    background-color: #3f3250;
+    border-color: #3f3250;
+}
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 35s linear infinite;
+    font-weight: 500;
+}
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+>>>>>>> 07b0cce (Initial commit with offlineBootstrap and updated UI)
 /* Timer text */
 #timer {
     font-weight: bold;

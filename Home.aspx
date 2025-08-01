@@ -93,6 +93,78 @@
         </div>
     </div>
 </section>
+<<<<<<< HEAD
+=======
+  <!-- Event Categories Section -->
+    <section class="py-5 bg-light rounded-3">
+   <div class="container text-center">
+            <h2 class="fw-bold mb-4" style="color: #e14658;">Explore Event Categories</h2>
+            <p class="mb-4 text-muted">Find your fit in diverse initiatives hosted by communities, NGOs, and institutions.</p>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded shadow-sm bg-white h-100">
+                        <h6 class="fw-bold" style="color: #e14658;">Community Service</h6>
+                        <p class="small text-muted">Cleanup drives, donation camps, awareness walks, and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded shadow-sm bg-white h-100">
+                        <h6 class="fw-bold" style="color: #e14658;">Educational Events</h6>
+                        <p class="small text-muted">Workshops, seminars, hackathons, and student-led summits.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded shadow-sm bg-white h-100">
+                        <h6 class="fw-bold" style="color: #e14658;">Health & Wellness</h6>
+                        <p class="small text-muted">Blood donation drives, yoga sessions, health check-up camps.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="p-3 border rounded shadow-sm bg-white h-100">
+                        <h6 class="fw-bold" style="color: #e14658;">Environmental Actions</h6>
+                        <p class="small text-muted">Tree plantations, zero-waste events, and sustainable drives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="container py-5">
+        <h2 class="text-center fw-bold mb-4" style="color: #94b499;">How It Works</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="p-3">
+                    <img src="Assets/icon-register.png" alt="Register" style="height: 60px;" />
+                    <h6 class="fw-bold mt-2" style="color: #e14658;">Sign Up</h6>
+                    <p class="small text-muted">Create an account as a participant, volunteer, or organizer.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-3">
+                    <img src="Assets/icon-browse.png" alt="Browse" style="height: 60px;" />
+                    <h6 class="fw-bold mt-2" style="color: #e14658;">Explore Events</h6>
+                    <p class="small text-muted">Search upcoming events and find one that excites you.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-3">
+                    <img src="Assets/icon-participate.png" alt="Participate" style="height: 60px;" />
+                    <h6 class="fw-bold mt-2" style="color: #e14658;">Get Involved</h6>
+                    <p class="small text-muted">Register, get approved, mark attendance, and perform your role.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="p-3">
+                    <img src="Assets/icon-certificate.png" alt="Certificate" style="height: 60px;" />
+                    <h6 class="fw-bold mt-2" style="color: #e14658;">Earn Recognition</h6>
+                    <p class="small text-muted">Receive certificates for verified attendance and duties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+>>>>>>> 07b0cce (Initial commit with offlineBootstrap and updated UI)
 
 <!-- Call to Action -->
 <section class="text-center py-5">
