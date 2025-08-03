@@ -6,7 +6,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card shadow-sm p-4 border-0 rounded-4">
+                <div class="login-card shadow-sm p-4 border-0 rounded-4"><!-- 👈 changed from .card to .login-card -->
                     <div class="mb-3">
                         <label for="txtEmail" class="form-label">Email:</label>
                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />

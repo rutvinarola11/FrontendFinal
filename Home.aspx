@@ -100,4 +100,40 @@
     <p style="color: #aaaaaa;">Sign up and explore events designed to create social impact, personal growth, and community building.</p>
 </section>
 
+<!-- 🌟 Welcome Modal -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white border-0 shadow-lg">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="welcomeModalLabel">Welcome to EventSphere</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="fs-5">We’re glad you’re here! 🎉</p>
+                <p>EventSphere is your one-stop solution for:</p>
+                <ul class="list-unstyled">
+                    <li>✅ Seamless volunteering with duty tracking and certificates</li>
+                    <li>✅ Easy event creation and management tools for organizers</li>
+                    <li>✅ Hassle-free event participation with reminders and rewards</li>
+                </ul>
+                <p class="mt-3">Join the movement and create real community impact today!</p>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Get Started</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (!sessionStorage.getItem("welcomeShown")) {
+            const modal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+            modal.show();
+            sessionStorage.setItem("welcomeShown", "true");
+        }
+    });
+</script>
+
+
 </asp:Content>

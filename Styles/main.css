@@ -1,16 +1,16 @@
-﻿/* Base Styling */
+﻿/* ===== Base Styling ===== */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #22252c;
+    background-color: #22252c; /* Dark background for full dashboard theme */
     color: #c0b3a0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar */
+/* ===== Navbar ===== */
 .navbar {
     background-color: #3f3250;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -33,12 +33,12 @@ body {
     margin-right: 10px;
 }
 
-/* Headings */
+/* ===== Headings ===== */
 h1, h2, h3, h4, h5, h6 {
-    color: #e14658;
+    color: #e14658; /* Accent color for headings */
 }
 
-/* Form Container */
+/* ===== Form Container ===== */
 .form-container {
     max-width: 500px;
     margin: 20px auto;
@@ -49,12 +49,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #222;
 }
 
-/* Inputs */
+/* ===== Inputs ===== */
 .form-control::placeholder {
     color: #888;
 }
 
-/* Buttons */
+/* ===== Buttons ===== */
 .btn-primary {
     background-color: #e14658;
     border-color: #e14658;
@@ -65,12 +65,12 @@ h1, h2, h3, h4, h5, h6 {
         border-color: #3f3250;
     }
 
-/* Timer text */
+/* ===== Timer Text ===== */
 #timer {
     font-weight: bold;
 }
 
-/* Feedback */
+/* ===== Feedback Messages ===== */
 .error-message {
     color: red;
     font-size: 14px;
@@ -80,8 +80,50 @@ h1, h2, h3, h4, h5, h6 {
     color: limegreen;
     font-size: 14px;
 }
+/* ============================
+   📢 HEADINGS
+   Affects: All pages
+=============================== */
+h2 {
+    color: #e14658;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+/* =========================================
+   💡 Login Page Card (Light theme only)
+   Affects: Login.aspx
+============================================ */
+.login-card {
+    background-color: #f5f8fc;
+    color: #3f3250;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
 
-/* Footer */
+    .login-card:hover {
+        transform: translateY(-2px);
+    }
+
+
+
+/* ============================
+   📦 GENERAL CONTAINERS
+   Affects: Shared across most pages like Dashboard, Event Listings, etc.
+=============================== */
+.container, .content-placeholder {
+    padding: 30px 0; /* Remove horizontal padding */
+    max-width: 100%; /* Make it span full width */
+    background-color: #22252c;
+    border-radius: 8px;
+}
+
+.content-placeholder {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+/* ===== Footer Styling ===== */
 footer {
     background-color: #3f3250;
     color: #aaaaaa;
@@ -94,15 +136,164 @@ footer {
         background-color: #e14658;
         color: #fff;
     }
+/* ============================
+   🧊 DASHBOARD CARDS
+   Affects: UserDashboard.aspx
+=============================== */
+.card {
+    background-color: #2f3340;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+}
 
-/* Responsive Fixes */
-@media (max-width: 600px) {
-    .form-container {
-        padding: 10px;
-        margin: 10px auto;
+    .card:hover {
+        transform: translateY(-5px);
     }
 
-    .btn {
+/* Grid layouts used in dashboard */
+.grid {
+    display: grid;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.dashboard-section {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #1d3557;
+}
+
+/* ============================
+   🎉 BANNER SECTION
+   Affects: UserDashboard.aspx
+=============================== */
+.banner {
+    padding: 60px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .banner h1 {
+        font-size: 36px;
+        color: #e14658;
+    }
+/* Submit button styling */
+.submit-button {
+    display: inline-block;
+    background-color: #e14658;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: auto;
+    margin-top: 10px;
+}
+
+    .submit-button:hover {
+        background-color: #3f3250;
+        color: white;
+    }
+/* ============================
+   📝 FORM CONTAINERS
+   Affects: EventCreation.aspx, ApplyVolunteer.aspx, Login.aspx
+=============================== */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #f5f8fc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input boxes styling */
+.inputbox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #3f3250;
+    margin-top: 5px;
+}
+
+    .inputbox:focus {
+        border-color: #e14658;
+        background-color: #f0f4f8;
+        outline: none;
+    }
+
+/* ===== Welcome Modal =====*/
+/* Optional: Smooth fade-in for modal */
+.modal.fade .modal-dialog {
+    transform: translateY(-20px);
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+/* ============================
+   📱 RESPONSIVE DESIGN
+   Affects: Mobile view of all pages
+=============================== */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    table, .register-table {
         width: 100%;
+        display: block;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .filter-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-group-vertical {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

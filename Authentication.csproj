@@ -70,13 +70,14 @@
     <Content Include="About.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="ExploreEvents.aspx" />
-    <Content Include="ForgetPassword.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="SignupConfirm.aspx" />
     <Content Include="Styles\main.css" />
     <Content Include="User\EventDetails.aspx" />
+    <Content Include="User\UserDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,12 +102,12 @@
     <Compile Include="ExploreEvents.aspx.designer.cs">
       <DependentUpon>ExploreEvents.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ForgetPassword.aspx.cs">
-      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ForgetPassword.aspx.designer.cs">
-      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="User\EventDetails.aspx.designer.cs">
       <DependentUpon>EventDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserDashboard.aspx.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\UserDashboard.aspx.designer.cs">
+      <DependentUpon>UserDashboard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
