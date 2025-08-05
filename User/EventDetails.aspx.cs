@@ -208,10 +208,9 @@ WHERE e.EventID = @EventID";
 				{
 					conn.Open();
 					SqlCommand check = new SqlCommand(
-	"SELECT COUNT(*) FROM ParticipantRegistrations WHERE UserID=@UID AND EventID=@EID", conn);
-					check.Parameters.AddWithValue("@UID", participantId);
+						"SELECT COUNT(*) FROM ParticipantRegistrations WHERE ParticipantID=@PID AND EventID=@EID", conn);
+					check.Parameters.AddWithValue("@PID", participantId);
 					check.Parameters.AddWithValue("@EID", eventId);
-
 
 					if ((int)check.ExecuteScalar() > 0)
 					{
@@ -222,10 +221,9 @@ WHERE e.EventID = @EventID";
 					}
 
 					SqlCommand insert = new SqlCommand(
-				 "INSERT INTO ParticipantRegistrations (EventID, UserID) VALUES(@EID, @UID)", conn);
+						"INSERT INTO ParticipantRegistrations (ParticipantID,EventID) VALUES(@PID,@EID)", conn);
+					insert.Parameters.AddWithValue("@PID", participantId);
 					insert.Parameters.AddWithValue("@EID", eventId);
-					insert.Parameters.AddWithValue("@UID", participantId);
-
 					insert.ExecuteNonQuery();
 
 					lblMessage.Text = "Registered as participant successfully!";
@@ -245,7 +243,7 @@ WHERE e.EventID = @EventID";
 		#region Other Buttons
 		protected void btnEdit_Click(object sender, EventArgs e)
 		{
-			ToggleEditMode(true);
+			Response.Redirect($"EditEvent.aspx?eventid={Request.QueryString["eventid"]}");
 		}
 
 		protected void btnDelete_Click(object sender, EventArgs e)
@@ -271,7 +269,10 @@ WHERE e.EventID = @EventID";
 			}
 		}
 
-
+		protected void btnBackToDashboard_Click(object sender, EventArgs e)
+		{
+			Response.Redirect("~/User/Dashboard.aspx");
+		}
 
 		protected void btnApplyVolunteerRedirect_Click(object sender, EventArgs e)
 		{
@@ -279,78 +280,5 @@ WHERE e.EventID = @EventID";
 			Response.Redirect($"ApplyVolunteer.aspx?eventid={Request.QueryString["eventid"]}");
 		}
 		#endregion
-		private void ToggleEditMode(bool isEdit)
-		{
-			lblTitle.Visible = lblDescription.Visible = lblDate.Visible =
-			lblStartTime.Visible = lblEndTime.Visible = lblLocation.Visible =
-			lblEmail.Visible = lblPhone.Visible = lblFee.Visible = !isEdit;
-
-			txtTitle.Visible = txtDescription.Visible = txtDate.Visible =
-			txtStartTime.Visible = txtEndTime.Visible = txtLocation.Visible =
-			txtEmail.Visible = txtPhone.Visible = txtFee.Visible = isEdit;
-
-			btnEdit.Visible = !isEdit;
-			btnUpdate.Visible = isEdit;
-			btnCancel.Visible = isEdit;
-			btnDelete.Visible = !isEdit;
-		}
-
-		protected void btnCancel_Click(object sender, EventArgs e)
-		{
-			ToggleEditMode(false);
-			LoadEventDetails(Convert.ToInt32(Request.QueryString["eventid"]));
-		}
-
-		protected void btnUpdate_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				int eventId = Convert.ToInt32(Request.QueryString["eventid"]);
-				string connStr = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-
-				using (SqlConnection conn = new SqlConnection(connStr))
-				using (SqlCommand cmd = new SqlCommand(@"
-            UPDATE Events SET 
-                Title = @Title,
-                Description = @Description,
-                Date = @Date,
-                StartTime = @StartTime,
-                EndTime = @EndTime,
-                Location = @Location,
-                ContactEmail = @Email,
-                ContactPhone = @Phone,
-                RegistrationFee = @Fee
-            WHERE EventID = @EventID", conn))
-				{
-					cmd.Parameters.AddWithValue("@Title", txtTitle.Text.Trim());
-					cmd.Parameters.AddWithValue("@Description", txtDescription.Text.Trim());
-					cmd.Parameters.AddWithValue("@Date", txtDate.Text.Trim());
-					cmd.Parameters.AddWithValue("@StartTime", txtStartTime.Text.Trim());
-					cmd.Parameters.AddWithValue("@EndTime", txtEndTime.Text.Trim());
-					cmd.Parameters.AddWithValue("@Location", txtLocation.Text.Trim());
-					cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
-					cmd.Parameters.AddWithValue("@Phone", txtPhone.Text.Trim());
-					cmd.Parameters.AddWithValue("@Fee", decimal.TryParse(txtFee.Text.Trim(), out decimal fee) ? fee : 0);
-					cmd.Parameters.AddWithValue("@EventID", eventId);
-
-					conn.Open();
-					cmd.ExecuteNonQuery();
-				}
-
-				ToggleEditMode(false);
-				LoadEventDetails(eventId);
-
-				lblMessage.Text = "Event updated successfully.";
-				lblMessage.CssClass = "text-success";
-				lblMessage.Visible = true;
-			}
-			catch (Exception ex)
-			{
-				lblMessage.Text = "Error updating event: " + ex.Message;
-				lblMessage.CssClass = "text-danger";
-				lblMessage.Visible = true;
-			}
-		}
 	}
-
 }

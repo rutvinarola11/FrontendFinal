@@ -33,15 +33,6 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Label lblTitle;
 
 		/// <summary>
-		/// txtTitle control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtTitle;
-
-		/// <summary>
 		/// lblDescription control.
 		/// </summary>
 		/// <remarks>
@@ -49,15 +40,6 @@ namespace Authentication.User
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label lblDescription;
-
-		/// <summary>
-		/// txtDescription control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtDescription;
 
 		/// <summary>
 		/// lblDate control.
@@ -69,15 +51,6 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Label lblDate;
 
 		/// <summary>
-		/// txtDate control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtDate;
-
-		/// <summary>
 		/// lblStartTime control.
 		/// </summary>
 		/// <remarks>
@@ -85,15 +58,6 @@ namespace Authentication.User
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label lblStartTime;
-
-		/// <summary>
-		/// txtStartTime control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtStartTime;
 
 		/// <summary>
 		/// lblEndTime control.
@@ -105,15 +69,6 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Label lblEndTime;
 
 		/// <summary>
-		/// txtEndTime control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtEndTime;
-
-		/// <summary>
 		/// lblLocation control.
 		/// </summary>
 		/// <remarks>
@@ -121,78 +76,6 @@ namespace Authentication.User
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label lblLocation;
-
-		/// <summary>
-		/// txtLocation control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtLocation;
-
-		/// <summary>
-		/// lblEmail control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblEmail;
-
-		/// <summary>
-		/// txtEmail control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtEmail;
-
-		/// <summary>
-		/// lblPhone control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblPhone;
-
-		/// <summary>
-		/// txtPhone control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtPhone;
-
-		/// <summary>
-		/// lblFee control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblFee;
-
-		/// <summary>
-		/// txtFee control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtFee;
-
-		/// <summary>
-		/// lblCategory control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblCategory;
 
 		/// <summary>
 		/// lblMode control.
@@ -204,6 +87,24 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Label lblMode;
 
 		/// <summary>
+		/// lblCategory control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblCategory;
+
+		/// <summary>
+		/// lblFee control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblFee;
+
+		/// <summary>
 		/// lblDeadline control.
 		/// </summary>
 		/// <remarks>
@@ -211,15 +112,6 @@ namespace Authentication.User
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label lblDeadline;
-
-		/// <summary>
-		/// lblStatus control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblStatus;
 
 		/// <summary>
 		/// lblTerms control.
@@ -231,6 +123,15 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Label lblTerms;
 
 		/// <summary>
+		/// lblStatus control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblStatus;
+
+		/// <summary>
 		/// lblOrganizer control.
 		/// </summary>
 		/// <remarks>
@@ -238,6 +139,24 @@ namespace Authentication.User
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label lblOrganizer;
+
+		/// <summary>
+		/// lblEmail control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblEmail;
+
+		/// <summary>
+		/// lblPhone control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblPhone;
 
 		/// <summary>
 		/// pnlVolunteerCategories control.
@@ -258,22 +177,22 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Repeater rptVolunteerCategories;
 
 		/// <summary>
-		/// Button2 control.
+		/// btnBackToDashboard control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button Button2;
+		protected global::System.Web.UI.WebControls.Button btnBackToDashboard;
 
 		/// <summary>
-		/// Button3 control.
+		/// btnApplyVolunteerRedirect control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button Button3;
+		protected global::System.Web.UI.WebControls.Button btnApplyVolunteerRedirect;
 
 		/// <summary>
 		/// pnlParticipant control.
@@ -285,22 +204,13 @@ namespace Authentication.User
 		protected global::System.Web.UI.WebControls.Panel pnlParticipant;
 
 		/// <summary>
-		/// btnBackToDashboard_Volunteer control.
+		/// btnRegisterParticipant control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button btnBackToDashboard_Volunteer;
-
-		/// <summary>
-		/// Button1 control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button Button1;
+		protected global::System.Web.UI.WebControls.Button btnRegisterParticipant;
 
 		/// <summary>
 		/// btnEdit control.
@@ -310,24 +220,6 @@ namespace Authentication.User
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Button btnEdit;
-
-		/// <summary>
-		/// btnUpdate control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button btnUpdate;
-
-		/// <summary>
-		/// btnCancel control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button btnCancel;
 
 		/// <summary>
 		/// btnDelete control.

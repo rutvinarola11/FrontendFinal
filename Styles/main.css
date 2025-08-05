@@ -1,155 +1,132 @@
-﻿/* ===== Base Styling ===== */
+﻿/* ===============================================
+   🔁 RESET & BASE STYLING
+   =============================================== */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #22252c; /* Dark background for full dashboard theme */
-    color: #c0b3a0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f5f5dc 0%, #ffffff 100%);
+    color: #4a4a4a;
+    line-height: 1.6;
 }
 
-/* ===== Navbar ===== */
-.navbar {
-    background-color: #3f3250;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-    .navbar a {
-        color: #c0b3a0 !important;
-    }
-
-        .navbar a:hover {
-            background-color: #e14658;
-            color: #fff !important;
-<<<<<<< HEAD
-        }
-=======
-            border-radius: 0.5rem; /* 8px rounded corners */
-            }
->>>>>>> 07b0cce (Initial commit with offlineBootstrap and updated UI)
-
-.logo {
-    height: 50px;
-    width: 50px;
+/* ===============================================
+   👤 AVATAR STYLING
+   =============================================== */
+.avatar-circle {
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
+    background: linear-gradient(180deg, #f5f5dc 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004d40; /* Deep teal text */
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== Headings ===== */
-h1, h2, h3, h4, h5, h6 {
-    color: #e14658; /* Accent color for headings */
-}
-
-/* ===== Form Container ===== */
-.form-container {
-    max-width: 500px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: #222;
-}
-
-/* ===== Inputs ===== */
-.form-control::placeholder {
-    color: #888;
-}
-
-/* ===== Buttons ===== */
-.btn-primary {
-    background-color: #e14658;
-    border-color: #e14658;
-}
-.bg-gradient-primary {
-    background: linear-gradient(90deg, #ffffff, #ffe4ea);
-    color: #e14658 !important;
-}
-.btn-primary:hover {
-    background-color: #3f3250;
-    border-color: #3f3250;
-}
+/* ===============================================
+   📜 SCROLLING TEXT BAR
+   =============================================== */
 .scrolling-text {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll-left 35s linear infinite;
+    background: linear-gradient(to right, #f7f7f5, #eae7dc);
+    color: #333;
+    font-size: 16px;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    position: relative;
     font-weight: 500;
 }
-.card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-}
 
+.scrolling-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 25s linear infinite;
+    padding-left: 100%;
+}
 
 @keyframes scroll-left {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
 
-<<<<<<< HEAD
-/* ===== Timer Text ===== */
-=======
     100% {
         transform: translateX(-100%);
     }
 }
->>>>>>> 07b0cce (Initial commit with offlineBootstrap and updated UI)
-/* Timer text */
->>>>>>> 197acb8808ca50515bc4f30466a67a54d5d0fb8e
-#timer {
-    font-weight: bold;
+
+/* ===============================================
+   📌 NAVBAR STYLING
+   =============================================== */
+.navbar {
+    background: linear-gradient(90deg, #008080 0%, #70c1b3 100%);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-/* ===== Feedback Messages ===== */
-.error-message {
-    color: red;
-    font-size: 14px;
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
 }
 
-.success-message {
-    color: limegreen;
-    font-size: 14px;
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-size: 16px;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
-/* ============================
-   📢 HEADINGS
-   Affects: All pages
-=============================== */
+
+    .navbar a:hover {
+        background-color: #8e4480; /* Plum hover */
+        color: #fff;
+    }
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .navbar-right {
+    gap: 10px;
+}
+
+.navbar-right a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #008080;
+    border-radius: 4px;
+}
+
+/* ===============================================
+   🟪 HEADING STYLING
+   =============================================== */
 h2 {
-    color: #e14658;
+    color: #8e4480; /* Plum */
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
 }
-/* =========================================
-   💡 Login Page Card (Light theme only)
-   Affects: Login.aspx
-============================================ */
-.login-card {
-    background-color: #f5f8fc;
-    color: #3f3250;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
 
-    .login-card:hover {
-        transform: translateY(-2px);
-    }
-
-
-
-/* ============================
-   📦 GENERAL CONTAINERS
-   Affects: Shared across most pages like Dashboard, Event Listings, etc.
-=============================== */
+/* ===============================================
+   📦 CONTAINER & CONTENT STYLING
+   =============================================== */
 .container, .content-placeholder {
-    padding: 30px 0; /* Remove horizontal padding */
-    max-width: 100%; /* Make it span full width */
-    background-color: #22252c;
+    padding: 30px 20px;
+    background-color: #ffffff;
     border-radius: 8px;
 }
 
@@ -157,26 +134,190 @@ h2 {
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-/* ===== Footer Styling ===== */
-footer {
-    background-color: #3f3250;
-    color: #aaaaaa;
-    text-align: center;
-    padding: 12px;
-    font-size: 14px;
+
+/* ===============================================
+   📝 FORM STYLING
+   =============================================== */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-    footer:hover {
-        background-color: #e14658;
-        color: #fff;
+.inputbox, .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #4a4a4a;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+    .inputbox:focus, .form-control:focus {
+        border-color: #8e4480;
+        background-color: #f9f9f9;
+        outline: none;
     }
-/* ============================
-   🧊 DASHBOARD CARDS
-   Affects: UserDashboard.aspx
-=============================== */
+
+.submit-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #008080 0%, #70c1b3 100%);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: auto;
+}
+
+    .submit-button:hover {
+        background-color: #8e4480;
+        color: white;
+    }
+
+/* ===============================================
+   📊 TABLE STYLING (Volunteer Table)
+   =============================================== */
+.volunteer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #4a4a4a;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+    .volunteer-table th,
+    .volunteer-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .volunteer-table th {
+        background-color: #8e4480;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .volunteer-table tr:nth-child(even) {
+        background-color: #fdfbd4;
+    }
+
+    .volunteer-table tr:hover {
+        background-color: #ffeef7;
+    }
+
+/* ===============================================
+   ✅ MESSAGE STYLES
+   =============================================== */
+.success-message {
+    font-size: 13px;
+    margin-top: 5px;
+    color: limegreen !important;
+}
+
+.error-message {
+    font-size: 13px;
+    margin-top: 5px;
+    color: red !important;
+}
+
+.message {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* ===============================================
+   📋 FORM CONTROL GROUPS
+   =============================================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* ===============================================
+   🟦 BUTTON GROUPS & FILTERS
+   =============================================== */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-box {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.filter-content {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+/* Filter Button Changes */
+.filter-content .submit-button {
+    background-color: #008080 !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+.filter-content .inputbox,
+.filter-content input[type="text"],
+.filter-content select {
+    color: #333 !important;
+    background-color: #fff !important;
+    border: 1px solid #ccc;
+}
+
+.filter-content label {
+    color: #4a4a4a !important;
+}
+
+/* ===============================================
+   🖼️ CARD & GRID STYLING
+   =============================================== */
 .card {
-    background-color: #2f3340;
-    color: #fff;
+    background-color: #ffffff;
+    color: #4a4a4a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -188,11 +329,9 @@ footer {
         transform: translateY(-5px);
     }
 
-/* Grid layouts used in dashboard */
 .grid {
     display: grid;
     gap: 20px;
-    max-width: 100%;
 }
 
 .grid-3 {
@@ -203,94 +342,55 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.dashboard-section {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    color: #1d3557;
-}
-
-/* ============================
-   🎉 BANNER SECTION
-   Affects: UserDashboard.aspx
-=============================== */
+/* ===============================================
+   🎉 BANNER STYLING
+   =============================================== */
 .banner {
     padding: 60px 20px;
-    border-radius: 10px;
-    color: #fff;
     text-align: center;
     margin-bottom: 30px;
+    background: linear-gradient(135deg, #008080, #20b2aa);
+    color: #fff;
 }
 
     .banner h1 {
         font-size: 36px;
-        color: #e14658;
+        color: #fdfbd4;
     }
-/* Submit button styling */
-.submit-button {
-    display: inline-block;
-    background-color: #e14658;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    width: auto;
-    margin-top: 10px;
+
+/* ===============================================
+   📄 CERTIFICATE PREVIEW & CONTAINER
+   =============================================== */
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-    .submit-button:hover {
-        background-color: #3f3250;
-        color: white;
-    }
-/* ============================
-   📝 FORM CONTAINERS
-   Affects: EventCreation.aspx, ApplyVolunteer.aspx, Login.aspx
-=============================== */
-.form-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 40px auto;
-    background-color: #f5f8fc;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Input boxes styling */
-.inputbox {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+.certificate-card, .certificate-preview {
+    border: 5px double #000;
+    padding: 40px;
+    text-align: center;
     background-color: #fff;
-    color: #3f3250;
-    margin-top: 5px;
+    color: #333;
+    width: 80%;
 }
 
-    .inputbox:focus {
-        border-color: #e14658;
-        background-color: #f0f4f8;
-        outline: none;
-    }
-
-/* ===== Welcome Modal =====*/
-/* Optional: Smooth fade-in for modal */
-.modal.fade .modal-dialog {
-    transform: translateY(-20px);
-    transition: transform 0.4s ease, opacity 0.3s ease;
+.certificate-preview {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 30px;
 }
 
-.modal.show .modal-dialog {
-    transform: translateY(0);
+.highlight {
+    font-weight: bold;
+    font-size: 24px;
+    color: #8e4480;
 }
-/* ============================
+
+/* ===============================================
    📱 RESPONSIVE DESIGN
-   Affects: Mobile view of all pages
-=============================== */
+   =============================================== */
 @media (max-width: 600px) {
     .form-container {
         padding: 20px;
@@ -331,3 +431,36 @@ footer {
         justify-content: space-between;
     }
 }
+
+/* ===============================================
+   🦶 FOOTER STYLING
+   =============================================== */
+footer {
+    background-color: #008080;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+    footer:hover {
+        background-color: #8e4480;
+        color: #fff;
+    }
+
+select {
+    background-color: #e0f7fa;
+    color: #004d40;
+    border: 1px solid #008080;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none;
+}
+
+    select:focus {
+        border: 2px solid #26a69a;
+        background-color: #b2ebf2;
+        box-shadow: 0 0 5px #26a69a;
+    }

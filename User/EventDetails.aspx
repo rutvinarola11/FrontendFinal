@@ -1,156 +1,190 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="EventDetails.aspx.cs" Inherits="Authentication.User.EventDetails" %>
+﻿<%@ Page Title="Event Details" Language="C#" MasterPageFile="~/MasterPage.Master"
+    AutoEventWireup="true" CodeBehind="EventDetails.aspx.cs"
+    Inherits="Authentication.User.EventDetails" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<div class="container my-5">
-    <div class="text-center mb-4">
-        <h1 class="display-5 fw-bold">Event Details</h1>
-        <p class="text-muted">Learn more about this event and join as a volunteer or participant.</p>
+<style>
+
+    .banner-section {
+        position: relative;
+        width: 100%;
+        max-height: 350px;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .banner-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(60%);
+    }
+
+    .banner-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        text-align: center;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner-overlay h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #343a40;
+    }
+
+    .card {
+         background: linear-gradient(180deg, #f5f5dc 0%, #ffffff 100%);
+         border-radius: 10px;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+    }
+</style>
+
+<div class="container mt-5">
+
+    <!-- 🔷 Banner -->
+    <div class="banner-section mb-5">
+        <asp:Image ID="imgBanner" runat="server" CssClass="img-fluid" />
+        <div class="banner-overlay">
+            <h1><asp:Label ID="lblTitle" runat="server" /></h1>
+        </div>
     </div>
 
-    <!-- Event Banner -->
-    <asp:Image ID="imgBanner" runat="server" CssClass="img-fluid rounded shadow mb-4"
-               Style="max-height:300px; object-fit:cover;" Visible="false" />
+    <div class="row g-4">
+        <!-- 📝 Event Details -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <div class="section-title"><h2>Event Details</h2></div>
+                    <dl class="row">
+                        <dt class="col-sm-4">Description</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblDescription" runat="server" /></dd>
 
-    
-    <!-- Event Info with Edit Support -->
-<table class="table table-bordered">
-    <tr><th>Title</th>
-        <td>
-            <asp:Label ID="lblTitle" runat="server" />
-            <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Description</th>
-        <td>
-            <asp:Label ID="lblDescription" runat="server" />
-            <asp:TextBox ID="txtDescription" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Date</th>
-        <td>
-            <asp:Label ID="lblDate" runat="server" />
-            <asp:TextBox ID="txtDate" runat="server" CssClass="form-control" TextMode="Date" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Start Time</th>
-        <td>
-            <asp:Label ID="lblStartTime" runat="server" />
-            <asp:TextBox ID="txtStartTime" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>End Time</th>
-        <td>
-            <asp:Label ID="lblEndTime" runat="server" />
-            <asp:TextBox ID="txtEndTime" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Location</th>
-        <td>
-            <asp:Label ID="lblLocation" runat="server" />
-            <asp:TextBox ID="txtLocation" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Contact Email</th>
-        <td>
-            <asp:Label ID="lblEmail" runat="server" />
-            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Contact Phone</th>
-        <td>
-            <asp:Label ID="lblPhone" runat="server" />
-            <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Registration Fee</th>
-        <td>
-            <asp:Label ID="lblFee" runat="server" />
-            <asp:TextBox ID="txtFee" runat="server" CssClass="form-control" Visible="false" />
-        </td>
-    </tr>
-    <tr><th>Category</th><td><asp:Label ID="lblCategory" runat="server" /></td></tr>
-    <tr><th>Mode</th><td><asp:Label ID="lblMode" runat="server" /></td></tr>
-    <tr><th>Registration Deadline</th><td><asp:Label ID="lblDeadline" runat="server" /></td></tr>
-    <tr><th>Status</th><td><asp:Label ID="lblStatus" runat="server" /></td></tr>
-    <tr><th>Terms Accepted</th><td><asp:Label ID="lblTerms" runat="server" /></td></tr>
-    <tr><th>Organizer</th><td><asp:Label ID="lblOrganizer" runat="server" /></td></tr>
-</table>
+                        <dt class="col-sm-4">Date</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblDate" runat="server" /></dd>
 
+                        <dt class="col-sm-4">Time</dt>
+                        <dd class="col-sm-8">
+                            <asp:Label ID="lblStartTime" runat="server" /> to 
+                            <asp:Label ID="lblEndTime" runat="server" />
+                        </dd>
 
-   <!-- Volunteer Categories -->
-<asp:Panel ID="pnlVolunteerCategories" runat="server" Visible="false" CssClass="mb-4">
-    <h4 class="mb-3">Available Volunteer Categories</h4>
-    <asp:Repeater ID="rptVolunteerCategories" runat="server">
-        <HeaderTemplate>
-            <table class="table table-striped align-middle shadow-sm rounded">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Category</th>
-                        <th>Required</th>
-                        <th>Allocated</th>
-                        <th>Remaining</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        </HeaderTemplate>
-        <ItemTemplate>
-            <tr>
-                <td><%# Eval("CategoryName") %></td>
-                <td><%# Eval("RequiredVolunteers") %></td>
-                <td><%# Eval("AllocatedVolunteers") %></td>
-                <td><%# Eval("RemainingVolunteers") %></td>
-            </tr>
-        </ItemTemplate>
-        <FooterTemplate>
-                </tbody>
-            </table>
-        </FooterTemplate>
-    </asp:Repeater>
+                        <dt class="col-sm-4">Location</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblLocation" runat="server" /></dd>
 
-    <!-- Actions -->
-    <div class="mt-4 d-flex justify-content-between align-items-center">
-    <asp:Button ID="Button2" runat="server" CssClass="btn btn-secondary btn-lg"
-        Text="← Back to Dashboard" PostBackUrl="~/User/UserDashboard.aspx" />
+                        <dt class="col-sm-4">Mode</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblMode" runat="server" /></dd>
 
-    <asp:Button ID="Button3" runat="server" CssClass="btn btn-success btn-lg"
-        Text="Apply as Volunteer" OnClick="btnApplyVolunteerRedirect_Click" />
-</div>
-</asp:Panel>
-    
+                        <dt class="col-sm-4">Category</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblCategory" runat="server" /></dd>
 
+                        <dt class="col-sm-4">Registration Fee</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblFee" runat="server" /></dd>
 
-    <!-- Participant Registration -->
-    <asp:Panel ID="pnlParticipant" runat="server" Visible="false" CssClass="mb-4">
-<div class="mt-4 d-flex justify-content-between align-items-center">
-    <asp:Button ID="btnBackToDashboard_Volunteer" runat="server" CssClass="btn btn-secondary btn-lg"
-        Text="← Back to Dashboard" PostBackUrl="~/User/UserDashboard.aspx" />
+                        <dt class="col-sm-4">Registration Deadline</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblDeadline" runat="server" /></dd>
 
-    <asp:Button ID="Button1" runat="server" CssClass="btn btn-success btn-lg"
-        Text="Register as Participant" OnClick="btnApplyVolunteerRedirect_Click" />
-</div>
+                        <dt class="col-sm-4">Terms Accepted</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblTerms" runat="server" /></dd>
+
+                        <dt class="col-sm-4">Status</dt>
+                        <dd class="col-sm-8"><asp:Label ID="lblStatus" runat="server" /></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🧑‍💼 Organizer Info -->
+        <div class="col-lg-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <div class="section-title"><h2>Organizer</h2></div>
+                    <p><strong>Name:</strong> <asp:Label ID="lblOrganizer" runat="server" /></p>
+                    <p><strong>Email:</strong> <asp:Label ID="lblEmail" runat="server" /></p>
+                    <p><strong>Phone:</strong> <asp:Label ID="lblPhone" runat="server" /></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🔹 Volunteer Categories -->
+    <asp:Panel ID="pnlVolunteerCategories" runat="server" Visible="false" CssClass="my-5">
+        <h4 class="mb-3 fw-semibold">Available Volunteer Categories</h4>
+        <asp:Repeater ID="rptVolunteerCategories" runat="server">
+            <HeaderTemplate>
+                <table class="table table-striped table-bordered shadow-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Category</th>
+                            <th>Required</th>
+                            <th>Allocated</th>
+                            <th>Remaining</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            </HeaderTemplate>
+            <ItemTemplate>
+                <tr>
+                    <td><%# Eval("CategoryName") %></td>
+                    <td><%# Eval("RequiredVolunteers") %></td>
+                    <td><%# Eval("AllocatedVolunteers") %></td>
+                    <td><%# Eval("RemainingVolunteers") %></td>
+                </tr>
+            </ItemTemplate>
+            <FooterTemplate>
+                    </tbody>
+                </table>
+            </FooterTemplate>
+        </asp:Repeater>
+
+        <div class="d-flex justify-content-between mt-4">
+            <asp:Button ID="btnBackToDashboard" runat="server" CssClass="btn btn-outline-secondary"
+                Text="← Back to Dashboard" OnClick="btnBackToDashboard_Click" />
+            <asp:Button ID="btnApplyVolunteerRedirect" runat="server" CssClass="btn submit-button text-light"
+                Text="Apply as Volunteer" OnClick="btnApplyVolunteerRedirect_Click" />
+        </div>
     </asp:Panel>
- 
-   <!-- Organizer Controls -->
-<div class="mt-3">
-    <asp:Button ID="btnEdit" runat="server" Text="Edit Event" CssClass="btn btn-warning me-2"
-        OnClick="btnEdit_Click" Visible="false" />
-    <asp:Button ID="btnUpdate" runat="server" Text="Save Changes" CssClass="btn btn-success me-2"
-        OnClick="btnUpdate_Click" Visible="false" />
-    <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary me-2"
-        OnClick="btnCancel_Click" Visible="false" />
-    <asp:Button ID="btnDelete" runat="server" Text="Delete Event" CssClass="btn btn-danger"
-        OnClick="btnDelete_Click" Visible="false"
-        OnClientClick="return confirm('Are you sure you want to delete this event?');" />
-      <div class="mt-4 d-flex justify-content-between">
+
+    <!-- 👥 Participant Registration -->
+    <asp:Panel ID="pnlParticipant" runat="server" Visible="false" CssClass="mt-4">
+        <asp:Button ID="btnRegisterParticipant" runat="server"
+            CssClass="btn btn-primary btn-lg"
+            Text="Register as Participant"
+            OnClick="btnRegisterParticipant_Click" />
+    </asp:Panel>
+
+    <!-- ⚙️ Organizer Controls -->
+    <div class="mt-4">
+        <asp:Button ID="btnEdit" runat="server" Text="Edit Event"
+            CssClass="btn btn-warning me-2" OnClick="btnEdit_Click" Visible="false" />
+        <asp:Button ID="btnDelete" runat="server" Text="Delete Event"
+            CssClass="btn btn-danger" OnClick="btnDelete_Click" Visible="false"
+            OnClientClick="return confirm('Are you sure you want to delete this event?');" />
+    </div>
+
+    <!-- ✅ Status Message -->
+    <asp:Label ID="lblMessage" runat="server" CssClass="text-danger mt-3 d-block" Visible="false"></asp:Label>
 
 </div>
 
-    <!-- Status Message -->
-    <asp:Label ID="lblMessage" runat="server" CssClass="mt-3 d-block" Visible="false"></asp:Label>
-</div>
- 
 </asp:Content>
-

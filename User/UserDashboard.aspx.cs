@@ -36,8 +36,8 @@ namespace Authentication.User
 			phCreateEvent.Visible = isOrganizer;
 			phMyOrganizedEvents.Visible = isOrganizer;
 			phVolunteerApplications.Visible = isOrganizer;
-			phApprovedVolunteerList.Visible = isOrganizer;
-			phParticipantManager.Visible = isOrganizer;
+			//phApprovedVolunteerList.Visible = isOrganizer;
+			//phParticipantManager.Visible = isOrganizer;
 			phMarkAttendance.Visible = isOrganizer;
 			phEventReport.Visible = isOrganizer;
 			phViewFeedback.Visible = isOrganizer;
